@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FeedMeEmployee.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FeedMeEmployee"
+    xmlns:views="clr-namespace:FeedMeEmployee.Views"
+    Title="FeedMeEmployee">
+
+    
+    <TabBar>
+        <!--<Tab Title="Test" Icon="money.svg" >
+            <ShellContent
+                    Title="Test"
+                    ContentTemplate="{DataTemplate views:Compte2Page}"
+                    Route="Compte2Page" />
+        </Tab>-->
+        <Tab Title="Compte" Icon="money.svg" >
+            <ShellContent
+            Title="Mon compte"
+            ContentTemplate="{DataTemplate views:ComptePage}"
+            Route="ComptePage" />
+        </Tab>
+        <Tab Title="Historique" Icon="historique.svg">
+            <ShellContent ContentTemplate="{DataTemplate views:Historique}"  Route="Historique" />
+        </Tab>
+    </TabBar>
+</Shell>

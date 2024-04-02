@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeedMeEmployee.Views.ComptePage"
+             x:Name="thisPage"
+             BindingContext="{x:Reference thisPage}"
+             Padding="20"
+             BackgroundColor="#F5F5F5">
+    <!-- Couleur de fond douce -->
+
+    <ScrollView>
+        <!-- Ajout de ScrollView pour la compatibilité avec les petits écrans -->
+        <StackLayout Spacing="20">
+            <!-- Montant disponible -->
+            <Frame BorderColor="#C24400" Padding="20" CornerRadius="10" HasShadow="True">
+                <StackLayout>
+                    <Label FontSize="Subtitle"
+                           HorizontalTextAlignment="Center"
+                           Text="Montant disponible"
+                           TextColor="#C24400" />
+                    <Label FontSize="Title"
+                        HorizontalTextAlignment="Center"
+                           Text="25,00 €"
+                           TextColor="#C24400"
+                           Margin="0,10,0,0" />
+                        <!-- Ajout d'une marge pour séparer les éléments -->
+                </StackLayout>
+            </Frame>
+
+            <!-- Solde du compte -->
+            <Frame BorderColor="#C24400" Padding="20" CornerRadius="10" HasShadow="True">
+                <StackLayout>
+                    <Label FontSize="Subtitle"
+                           HorizontalTextAlignment="Center"
+                           Text="Solde du compte"
+                           TextColor="#C24400" />
+                    <Label FontSize="Title"
+                           HorizontalTextAlignment="Center"
+                           Text="185,00 €"
+                           TextColor="#C24400"
+                           Margin="0,10,0,0" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Bouton Paiement NFC -->
+            <Button Clicked="Button_Clicked_MakePayment"
+                    Text="Paiement NFC"
+                    IsEnabled="{Binding IsEnabled}"
+                    VerticalOptions="CenterAndExpand"
+                    BackgroundColor="#C24400"
+                    TextColor="White"
+                FontSize="Medium"
+                    Margin="0,20,0,0"
+                    CornerRadius="30" />
+                <!-- Boutons avec coins arrondis -->
+
+                <!-- ActivityIndicator -->
+                <ActivityIndicator IsRunning="{Binding IsProcessing}"
+                        IsVisible="{Binding IsProcessing}"
+                        VerticalOptions="Center"
+                        Color="#C24400" />
+                <!-- Indicateur de chargement avec couleur thématique -->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

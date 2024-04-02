@@ -1,0 +1,67 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FeedMeEmployee.Views.Compte2Page"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="0" Padding="0">
+
+            <!-- Header with image and text details -->
+            <Grid HeightRequest="200" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                <Image Source="test.jpg" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <BoxView Color="Black" Opacity="0.7"/>
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="PHILIPPE"
+                           FontSize="30"
+                           TextColor="White"
+                           FontAttributes="Bold"/>
+                    <Label Text="43 ans"
+                           TextColor="White"
+                           FontSize="Medium"/>
+                    <Label Text="I'm Philippe. I worked bodyguard since 2003. I protected Hollywood stars and another famous persons."
+                           TextColor="White"
+                           FontSize="Small"
+                           HorizontalTextAlignment="Center"/>
+                    <HorizontalStackLayout Spacing="5">
+                        <!-- Flags for language -->
+                        <Image Source="us_flag.jpg" WidthRequest="30" HeightRequest="20"/>
+                        <Image Source="fr_flag.jpg" WidthRequest="30" HeightRequest="20"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Input and buttons -->
+            <Frame Margin="10" Padding="10" BackgroundColor="#333333" CornerRadius="10">
+                <VerticalStackLayout Spacing="10">
+                    <Entry Placeholder="Où allez-vous ?"
+                           BackgroundColor="White"
+                           HeightRequest="40"/>
+                    <Button Text="3 heures"
+                            BackgroundColor="#555555"
+                            CornerRadius="5"
+                            HeightRequest="40"
+                            TextColor="White"/>
+                    <HorizontalStackLayout Spacing="10">
+                        <Button Text="Instructions"
+                                BackgroundColor="#555555"
+                                CornerRadius="5"
+                                HeightRequest="40"
+                                HorizontalOptions="FillAndExpand"
+                                TextColor="White"/>
+                        <Button Text="Cash"
+                                BackgroundColor="#555555"
+                                CornerRadius="5"
+                                HeightRequest="40"
+                                HorizontalOptions="FillAndExpand"
+                                TextColor="White"/>
+                    </HorizontalStackLayout>
+                    <Button Text="Payer €81"
+                            BackgroundColor="#4CAF50"
+                            CornerRadius="5"
+                            HeightRequest="40"
+                            TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
