@@ -15,14 +15,12 @@
                     ContentTemplate="{DataTemplate views:Compte2Page}"
                     Route="Compte2Page" />
         </Tab>-->
-        <Tab Title="Compte" Icon="money.svg" >
+        <Tab Title="Compte" Icon="money.png" >
             <ShellContent
             Title="Mon compte"
             ContentTemplate="{DataTemplate views:ComptePage}"
             Route="ComptePage" />
         </Tab>
-        <Tab Title="Historique" Icon="historique.svg">
-            <ShellContent ContentTemplate="{DataTemplate views:Historique}"  Route="Historique" />
-        </Tab>
+        <ShellContent ContentTemplate="{DataTemplate views:Historique}" Route="Historique" Icon="historique.png"/>
     </TabBar>
 </Shell>
